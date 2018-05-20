@@ -1,0 +1,49 @@
+Co jest do zrobienia?
+
+Należy wygenerować i wyrenderować dane w postaci tabelarycznej.
+
+
+Wymagania:
+
+Dane jakie mają zostać wygenerowane oraz ich założenia:
+  - Imię
+    - logiczny ciąg znaków
+  - Nazwisko
+    - logiczny ciąg znaków
+  - Data urodzenia
+    - Rok
+      - z przedziału pomiędzy 1930-2000
+    - Miesiąc
+      - z przedziału pomiędzy 1-12
+    - Dzień
+      - z przedziału pomiędzy 1-30
+  - Pesel
+    - 13 znaków, gdzie:
+      - 8 pierwszych to data urodzenia
+        - w przypadku miesiąca i dnia, jeżeli dana jest pojedynczą cyfrą należy poprzedzić ją cyfrą '0'
+      - 5 ostatnich to randomowa liczba
+    - musi być unikalny
+
+
+Zadanie:
+
+x1. Dane należy wygenerować w ilości 200 wierszy oraz wyrenderować w postaci tabelki z nagłówkami określającymi nazwe kolumny.
+  - Data urodzenia powinna zostać wyświetlona w formacie 'mm/dd/yyyy'
+
+x2. Do nagłówków kolumn należy podpiąć zdarzenia na kliknięcie myszką, które spowodują posortowanie wierszy.
+  - każde kliknięcie powoduje zmianę kolejności sortowania z rosnącego na malejące i na odwrót
+  - początkowe wywołanie sortowania powinno posortować wiersze rosnąco
+
+x3. Nad tabelą powinno znajdować się pole tekstowe, które pozwala na filtrowanie wierszy.
+  - każde wpisanie nowego znaku powinno spowodować przefiltrowanie wierszy i wyrenderowanie tabelki z wierszami,
+  w których chociaż jeden element zawiera wprowadzony tekst
+
+x4. Wiersze należy wstawić w przewijalny kontener o wysokości 400px
+
+x5. Nie używamy gotowych bibliotek :)
+
+6. Dla chętnych dodać możliwość przechodzenia do kolejnej strony z nowo wygenerowanym setem danych.
+  x- poprzednio wygenerowane dane powinny zostać zapisane do pamięci (np. session lub local storage)
+  x- powinna być możliwość powrotu do poprzedniego setu danych
+  - po przesortowaniu czy przefiltrowaniu wracamy do strony pierwszej
+  x- mile widziana informacja o aktualnie wyświetlanym secie danych (np. w postaci liczby określającej stronę)

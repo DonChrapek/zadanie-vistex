@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+body {
+    background-color: #58a6ff;
+}
+
+#app {
+    padding: 5%;
+    text-align: center;
+}
+
+#filter-input {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 1em;
+    border-radius: 10%;
+    border: none;
+    background-color: #000158;
+    color: white;    
+}
+
+#filter-input::placeholder {
+    color: white;
+}
+
+#table-container {
+    height: 400px;
+    overflow: auto;
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+#main-table {
+    display: table;
+    margin: auto;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+#main-table thead {   
+    background-color: #000158;
+    color: white;
+    font-weight: 600;
+    width: 400px;
+}
+
+#main-table th {   
+    padding: 8px 0;
+    cursor: pointer;
+    border-right: 1px solid black;
+}
+
+.grey-row {
+    background-color: lightgray;
+}
+
+.white-row {
+    background-color: #fff;
+}
+
+tbody {
+    height: 370px;
+}
+
+tbody tr {
+    border-bottom: 1px solid black;
+}
+
+td {
+    padding: 4px 0;
+    border-right: 1px solid black;
+}
+
+#main-table .cell-first-name {
+    text-align: left;   
+    padding-left: 1em;
+    width: 30%;
+}
+
+#main-table .cell-last-name {
+    text-align: left;   
+    padding-left: 1em;
+    width: 30%;
+}
+
+#main-table .cell-birth-date {
+    width: 20%;
+}
+
+#main-table .cell-pesel {
+    width: 20%;
+}
+
+#currentPageBox {
+    width: 2em;
+}
+
+.navigation-button {
+    color: white;
+    padding: 1em;
+    background-color: #000158;
+    border:none;
+    border-radius: 10%;
+    cursor: pointer;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabela</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+    <section id="app">
+        <div class="filter-container">
+            <input type="text" name="filter" placeholder="filter" id="filter-input" onkeyup="filter()">
+        </div>
+
+        <div id="table-container">
+            <table id="main-table">
+                <thead>
+                    <tr>
+                        <th id="fnameHeader" onclick="sortTable(0)">Imię</th>
+                        <th id="lnameHeader" onclick="sortTable(1)">Nazwisko</th>
+                        <th id="bdateHeader" onclick="sortByDate()">Data urodzenia</th>
+                        <th id="peselHeader" onclick="sortTable(3)">Pesel</th>
+                    </tr>
+                </thead>
+                <tbody id="main-table-body">
+                    <!-- Losowo wygenerowane dane -->
+                </tbody>
+            </table>
+        </div>
+        <div class="page-switcher">
+            <button class="navigation-button" onclick="moveToFirstPage()">&#9664;&#9664;</button>
+            <button onclick="previousPage()" class="navigation-button">&#9664;</button>
+            <span id="current-page">1</span>
+            <span>/</span>
+            <span id="number-of-pages">1</span>   
+            <button onclick="nextPage()" class="navigation-button">&#9654;</button>         
+            <button onclick="moveToLastPage()" class="navigation-button">&#9654;&#9654;</button>         
+        </div>
+        
+    </section>
+    
+    <!-- Skrypty -->
+    <script src="js/person.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/generateData.js"></script>
+    <script>
+        generateData();
+        renderData();
+    </script>
+
+</body>
+
+</html>
